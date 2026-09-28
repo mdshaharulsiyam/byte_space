@@ -1,26 +1,137 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=clash-display@500,600,700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #003be2;
+  --color-primary-hover: #0445ff;
+  --color-secondary: #d4fb20;
+  --color-secondary-hover: #cbfc01;
+
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-body: "Satoshi", sans-serif;
+
+  --shadow-card: 0 8px 10px rgba(0, 0, 0, 0.07);
+  --shadow-auth: 0 24px 36px rgba(0, 0, 0, 0.1);
+}
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #242528;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .heading-l {
+    @apply font-heading font-semibold text-4xl md:text-6xl lg:text-[72px] leading-[1.2] tracking-tight;
+  }
+
+  .heading-m {
+    @apply font-heading font-semibold text-3xl md:text-4xl lg:text-[44px] leading-[1.2] tracking-tight;
+  }
+
+  .heading-s {
+    @apply font-heading font-semibold text-2xl md:text-3xl lg:text-[36px] leading-[1.2];
+  }
+
+  .heading-xs {
+    @apply font-heading font-semibold text-[20px] leading-[1.2];
+  }
+
+  .body-l {
+    @apply font-body font-normal text-[18px] leading-[1.6];
+  }
+
+  .body-m {
+    @apply font-body font-normal text-[16px] leading-[1.6];
+  }
+
+  .body-s {
+    @apply font-body font-normal text-[14px] leading-[1.6];
+  }
+
+  .body-xs {
+    @apply font-body font-normal text-[12px] leading-[1.6];
+  }
+
+  .label-xl {
+    @apply font-body font-medium text-[20px] leading-[1.2];
+  }
+
+  .label-l {
+    @apply font-body font-medium text-[18px] leading-[1.2];
+  }
+
+  .label-m {
+    @apply font-body font-medium text-[16px] leading-[1.2];
+  }
+
+  .label-s {
+    @apply font-body font-medium text-[14px] leading-[1.2];
+  }
+
+  .label-xs {
+    @apply font-body font-medium text-[12px] leading-[1.2];
+  }
+
+  .container-custom {
+    @apply w-full max-w-[1200px] mx-auto px-5 md:px-10 xl:px-0;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-body font-medium text-[16px] cursor-pointer transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-secondary hover:bg-secondary-hover text-zinc-900 inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-primary hover:bg-primary-hover text-white inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-white hover:border-zinc-400 text-zinc-800 hover:text-zinc-950 border border-zinc-200 inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-200;
+  }
+
+  .card-auth {
+    @apply bg-white rounded-[24px] p-8 md:p-12 shadow-auth w-full max-w-[579px];
+  }
+
+  .input-auth {
+    @apply w-full h-14 px-5 py-3.5 rounded-[16px] border border-zinc-200 bg-white text-zinc-950 placeholder:text-zinc-400 font-body text-[16px] transition-all duration-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/15;
+  }
+
+  .label-auth {
+    @apply block font-body font-medium text-[14px] text-zinc-800 mb-2;
+  }
+
+  .auth-bg-wrapper {
+    @apply bg-primary relative overflow-hidden;
+  }
+
+  .auth-grid-lines {
+    @apply absolute inset-0 pointer-events-none;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 96px 96px;
+  }
+
+  .card-course {
+    @apply bg-white rounded-[24px] border border-zinc-200 p-4 flex flex-col justify-between transition-all duration-200 hover:border-zinc-300 hover:shadow-card hover:-translate-y-0.5;
+  }
+
+  .card-category {
+    @apply bg-zinc-100 rounded-[24px] p-6 flex flex-col items-center justify-center text-center transition-all duration-200 hover:bg-white hover:shadow-card hover:-translate-y-0.5 cursor-pointer;
+  }
+
+  .badge-pill {
+    @apply font-body font-medium text-[12px] inline-flex items-center gap-1.5 px-3 py-1 rounded-full;
+  }
 }
