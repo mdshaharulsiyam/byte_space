@@ -1,6 +1,5 @@
 import logo from "./logo.png";
 import heroStudent from "./hero-student.png";
-import hero3dOrnament from "./hero-3d-ornament.png";
 import ornamentCoilLime from "./ornament-coil-lime.png";
 import ornamentSquiggleWhite from "./ornament-squiggle-white.png";
 import ornamentRingWhite from "./ornament-ring-white.png";
@@ -18,7 +17,6 @@ import course3 from "./course-3.png";
 import course4 from "./course-4.png";
 import course5 from "./course-5.png";
 import course6 from "./course-6.png";
-import courseAvatars from "./course-avatars.png";
 import categoryDesign from "./category-design.png";
 import categoryDevelopment from "./category-development.png";
 import categoryItSoftware from "./category-it-software.png";
@@ -33,7 +31,6 @@ import testimonialJames from "./testimonial-james.png";
 import testimonialAlex from "./testimonial-alex.png";
 import registerIllustration from "./register-illustration.png";
 import brandLogo from "./brand-logo.png";
-import happyStudentsAvatars from "./happy-students-avatars.png";
 import student1 from "./student-1.jpg";
 import student2 from "./student-2.jpg";
 import student3 from "./student-3.jpg";
@@ -48,7 +45,6 @@ import courseAvatar4 from "./course-avatar-4.jpg";
 export const images = {
   logo,
   heroStudent,
-  hero3dOrnament,
   ornamentCoilLime,
   ornamentSquiggleWhite,
   ornamentRingWhite,
@@ -66,7 +62,6 @@ export const images = {
   course4,
   course5,
   course6,
-  courseAvatars,
   categoryDesign,
   categoryDevelopment,
   categoryItSoftware,
@@ -81,7 +76,6 @@ export const images = {
   testimonialAlex,
   registerIllustration,
   brandLogo,
-  happyStudentsAvatars,
   student1,
   student2,
   student3,
@@ -97,7 +91,6 @@ export const images = {
 export {
   logo,
   heroStudent,
-  hero3dOrnament,
   ornamentCoilLime,
   ornamentSquiggleWhite,
   ornamentRingWhite,
@@ -115,7 +108,6 @@ export {
   course4,
   course5,
   course6,
-  courseAvatars,
   categoryDesign,
   categoryDevelopment,
   categoryItSoftware,
@@ -130,7 +122,6 @@ export {
   testimonialAlex,
   registerIllustration,
   brandLogo,
-  happyStudentsAvatars,
   student1,
   student2,
   student3,
@@ -144,3 +135,4 @@ export {
 };
 
 export default images;
+

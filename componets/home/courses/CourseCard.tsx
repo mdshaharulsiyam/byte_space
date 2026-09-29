@@ -1,4 +1,7 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 import {
   courseAvatar1,
   courseAvatar2,
@@ -26,11 +29,23 @@ export interface Course {
 
 interface CourseCardProps {
   course: Course;
+  index?: number;
 }
 
-export default function CourseCard({ course }: CourseCardProps) {
+export default function CourseCard({ course, index = 0 }: CourseCardProps) {
   return (
-    <div className="bg-white rounded-3xl p-4 border border-zinc-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+    <motion.div
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{
+        duration: 0.5,
+        delay: (index % 3) * 0.1,
+        ease: "easeOut",
+      }}
+      whileHover={{ y: -6, transition: { duration: 0.25 } }}
+      className="bg-white rounded-3xl p-4 border border-zinc-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] transition-shadow duration-300 flex flex-col justify-between"
+    >
       <div>
         <div
           className="relative w-full rounded-2xl overflow-hidden bg-zinc-100"
@@ -143,6 +158,6 @@ export default function CourseCard({ course }: CourseCardProps) {
           </span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

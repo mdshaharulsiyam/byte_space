@@ -8,3 +8,4 @@ export { default as ManageCoursesSection } from "../home/ManageCoursesSection";
 export { default as CreatorBannerSection } from "../home/CreatorBannerSection";
 export { default as TestimonialsSection } from "../home/TestimonialsSection";
 export { default as Footer } from "./Footer";
+export { default as SmoothScroll } from "./SmoothScroll";

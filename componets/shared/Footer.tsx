@@ -1,4 +1,4 @@
-import { FooterBottom, FooterNav, FooterNewsletter } from "./footer";
+import { FooterBottom, FooterNav, FooterNewsletter } from "./footer/index";
 
 export default function Footer() {
   return (

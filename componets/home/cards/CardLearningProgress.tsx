@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 /**
  * CardLearningProgress — floating hero card
  * Matches Figma: 232×131, r:16, white fill
@@ -43,10 +47,12 @@ export default function CardLearningProgress() {
         aria-valuemin={0}
         aria-valuemax={100}
       >
-        <div
+        <motion.div
           className="h-full rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
           style={{
-            width: `${progress}%`,
             backgroundColor: "#cbfc01",
           }}
         />

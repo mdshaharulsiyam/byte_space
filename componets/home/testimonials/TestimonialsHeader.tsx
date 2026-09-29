@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function TestimonialsHeader() {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 sm:gap-8 lg:gap-12">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 sm:gap-8 lg:gap-12"
+    >
       <div className="max-w-[480px]">
         <h2 className="font-heading font-bold text-zinc-900 text-3xl sm:text-4xl md:text-[42px] lg:text-[44px] leading-[1.18] tracking-tight">
           Discover What Our
@@ -17,6 +27,6 @@ export default function TestimonialsHeader() {
           enthusiastic learners and accomplished creators.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
