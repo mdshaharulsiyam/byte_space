@@ -19,6 +19,12 @@ import course4 from "./course-4.png";
 import course5 from "./course-5.png";
 import course6 from "./course-6.png";
 import courseAvatars from "./course-avatars.png";
+import categoryDesign from "./category-design.png";
+import categoryDevelopment from "./category-development.png";
+import categoryItSoftware from "./category-it-software.png";
+import categoryBusiness from "./category-business.png";
+import categoryMarketing from "./category-marketing.png";
+import categoryPhotography from "./category-photography.png";
 
 export const images = {
   logo,
@@ -42,6 +48,12 @@ export const images = {
   course5,
   course6,
   courseAvatars,
+  categoryDesign,
+  categoryDevelopment,
+  categoryItSoftware,
+  categoryBusiness,
+  categoryMarketing,
+  categoryPhotography,
 };
 
 export {
@@ -66,6 +78,12 @@ export {
   course5,
   course6,
   courseAvatars,
+  categoryDesign,
+  categoryDevelopment,
+  categoryItSoftware,
+  categoryBusiness,
+  categoryMarketing,
+  categoryPhotography,
 };
 
 export default images;
