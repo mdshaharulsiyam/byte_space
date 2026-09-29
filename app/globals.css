@@ -9,6 +9,7 @@
 
   --font-heading: var(--font-poppins), sans-serif;
   --font-body: "Satoshi", sans-serif;
+  --font-clash: "Clash Display", sans-serif;
 
   --shadow-card: 0 8px 10px rgba(0, 0, 0, 0.07);
   --shadow-auth: 0 24px 36px rgba(0, 0, 0, 0.1);
