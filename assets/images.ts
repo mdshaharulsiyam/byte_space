@@ -25,6 +25,7 @@ import categoryItSoftware from "./category-it-software.png";
 import categoryBusiness from "./category-business.png";
 import categoryMarketing from "./category-marketing.png";
 import categoryPhotography from "./category-photography.png";
+import growthIllustration from "./growth-illustration.png";
 
 export const images = {
   logo,
@@ -54,6 +55,7 @@ export const images = {
   categoryBusiness,
   categoryMarketing,
   categoryPhotography,
+  growthIllustration,
 };
 
 export {
@@ -84,6 +86,7 @@ export {
   categoryBusiness,
   categoryMarketing,
   categoryPhotography,
+  growthIllustration,
 };
 
 export default images;
