@@ -236,8 +236,8 @@ export default function Hero() {
         <div
           className="absolute z-30 transition-transform duration-300 hover:scale-[1.03]"
           style={{
-            left: "clamp(8px, 12%, 195px)",
-            top: "22%",
+            left: "calc(50% - clamp(160px, 22vw, 316px))",
+            top: "24%",
           }}
         >
           <CardTopCourses />
@@ -246,8 +246,8 @@ export default function Hero() {
         <div
           className="absolute z-30 transition-transform duration-300 hover:scale-[1.03]"
           style={{
-            right: "clamp(8px, 10%, 185px)",
-            top: "20%",
+            right: "calc(50% - clamp(180px, 24.5vw, 353px))",
+            top: "22%",
           }}
         >
           <CardLearningProgress />
@@ -256,7 +256,7 @@ export default function Hero() {
         <div
           className="absolute z-30 transition-transform duration-300 hover:scale-[1.03]"
           style={{
-            left: "clamp(8px, 8%, 145px)",
+            left: "calc(50% - clamp(180px, 27vw, 392px))",
             bottom: "8%",
           }}
         >
