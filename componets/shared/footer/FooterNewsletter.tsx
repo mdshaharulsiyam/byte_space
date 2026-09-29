@@ -59,7 +59,7 @@ export default function FooterNewsletter() {
       <p className="font-body text-zinc-400 text-xs mt-3 leading-relaxed">
         By subscribing you agree with our{" "}
         <Link
-          href="/privacy"
+          href="#"
           className="underline hover:text-zinc-600 transition-colors"
         >
           Privacy Policy
