@@ -65,8 +65,8 @@ export default function Hero() {
         <div
           className="absolute pointer-events-none"
           style={{
-            top: "clamp(260px, 36vw, 460px)",
-            left: "clamp(12px, 11vw, 170px)",
+            top: "clamp(230px, 30vw, 390px)",
+            left: "clamp(20px, 14vw, 210px)",
             width: "clamp(70px, 12vw, 175px)",
           }}
         >
@@ -117,8 +117,8 @@ export default function Hero() {
         <div
           className="absolute pointer-events-none"
           style={{
-            top: "clamp(260px, 35vw, 450px)",
-            right: "clamp(16px, 9.5vw, 140px)",
+            top: "clamp(230px, 29vw, 380px)",
+            right: "clamp(24px, 14vw, 195px)",
             width: "clamp(75px, 12.5vw, 188px)",
           }}
         >
@@ -208,10 +208,10 @@ export default function Hero() {
             left: "50%",
             bottom: 0,
             transform: "translateX(-50%) translateY(58%)",
-            width: "clamp(560px, 90vw, 1240px)",
+            width: "clamp(530px, 86vw, 1180px)",
             aspectRatio: "1 / 1",
             borderRadius: "50%",
-            border: "clamp(80px, 24vw, 340px) solid #cbfc01",
+            border: "clamp(76px, 23vw, 325px) solid #cbfc01",
           }}
           aria-hidden="true"
         />
