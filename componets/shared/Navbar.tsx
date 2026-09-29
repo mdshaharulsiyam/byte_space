@@ -12,8 +12,8 @@ interface NavbarProps {
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Courses", href: "/courses" },
-  { name: "Creators", href: "/creators" },
+  { name: "Courses", href: "#" },
+  { name: "Creators", href: "#" },
 ];
 
 export default function Navbar({ className = "" }: NavbarProps) {
@@ -25,7 +25,6 @@ export default function Navbar({ className = "" }: NavbarProps) {
       className={`w-full bg-primary text-white relative ${className}`}
       style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}
     >
-      {/* Figma grid pattern — 120×120px white lines at ~10% opacity */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -38,10 +37,7 @@ export default function Navbar({ className = "" }: NavbarProps) {
         aria-hidden="true"
       />
 
-      {/* Nav container — 1200px max-width, 80px mobile / 96px desktop height */}
       <div className="container-custom relative z-10 flex items-center h-[80px] md:h-[96px]">
-
-        {/* ── Logo (left) ── */}
         <Link
           href="/"
           className="flex items-center gap-2 shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg"
@@ -60,13 +56,12 @@ export default function Navbar({ className = "" }: NavbarProps) {
           </span>
         </Link>
 
-        {/* ── Center nav links (desktop) ── */}
         <nav
           className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2"
           aria-label="Main Navigation"
         >
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = link.href !== "#" && pathname === link.href;
             return (
               <Link
                 key={link.name}
@@ -83,9 +78,7 @@ export default function Navbar({ className = "" }: NavbarProps) {
           })}
         </nav>
 
-        {/* ── Right side: Sign In | Join Us + Cart (desktop) ── */}
         <div className="hidden md:flex items-center gap-4 ml-auto">
-          {/* Sign In */}
           <Link
             href="/login"
             className="font-body font-medium text-[15px] text-white/70 hover:text-white transition-colors duration-200"
@@ -93,13 +86,11 @@ export default function Navbar({ className = "" }: NavbarProps) {
             Sign In
           </Link>
 
-          {/* Vertical separator */}
           <span
             className="block w-px h-[16px] bg-white/25 shrink-0"
             aria-hidden="true"
           />
 
-          {/* Join Us */}
           <Link
             href="/register"
             className="font-body font-medium text-[15px] text-white/70 hover:text-white transition-colors duration-200"
@@ -107,7 +98,6 @@ export default function Navbar({ className = "" }: NavbarProps) {
             Join Us
           </Link>
 
-          {/* Cart icon */}
           <button
             type="button"
             className="ml-1 text-white/70 hover:text-white transition-colors cursor-pointer p-1"
@@ -130,7 +120,6 @@ export default function Navbar({ className = "" }: NavbarProps) {
           </button>
         </div>
 
-        {/* ── Mobile hamburger ── */}
         <button
           type="button"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -154,7 +143,6 @@ export default function Navbar({ className = "" }: NavbarProps) {
         </button>
       </div>
 
-      {/* ── Mobile menu ── */}
       {isMobileMenuOpen && (
         <div
           className="md:hidden relative z-10 px-5 py-6 space-y-5"
@@ -162,7 +150,7 @@ export default function Navbar({ className = "" }: NavbarProps) {
         >
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = link.href !== "#" && pathname === link.href;
               return (
                 <Link
                   key={link.name}
