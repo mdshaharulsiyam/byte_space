@@ -12,6 +12,13 @@ import logoipsum2 from "./logoipsum-2.png";
 import logoipsum3 from "./logoipsum-3.png";
 import logoipsum4 from "./logoipsum-4.png";
 import logoipsum5 from "./logoipsum-5.png";
+import course1 from "./course-1.png";
+import course2 from "./course-2.png";
+import course3 from "./course-3.png";
+import course4 from "./course-4.png";
+import course5 from "./course-5.png";
+import course6 from "./course-6.png";
+import courseAvatars from "./course-avatars.png";
 
 export const images = {
   logo,
@@ -28,6 +35,13 @@ export const images = {
   logoipsum3,
   logoipsum4,
   logoipsum5,
+  course1,
+  course2,
+  course3,
+  course4,
+  course5,
+  course6,
+  courseAvatars,
 };
 
 export {
@@ -45,6 +59,13 @@ export {
   logoipsum3,
   logoipsum4,
   logoipsum5,
+  course1,
+  course2,
+  course3,
+  course4,
+  course5,
+  course6,
+  courseAvatars,
 };
 
 export default images;
