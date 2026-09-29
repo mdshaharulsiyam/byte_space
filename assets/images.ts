@@ -28,6 +28,9 @@ import categoryPhotography from "./category-photography.png";
 import growthIllustration from "./growth-illustration.png";
 import manageCoursesIllustration from "./manage-courses-illustration.png";
 import creatorBannerBg from "./creator-banner-bg.png";
+import testimonialSarah from "./testimonial-sarah.png";
+import testimonialJames from "./testimonial-james.png";
+import testimonialAlex from "./testimonial-alex.png";
 
 export const images = {
   logo,
@@ -60,6 +63,9 @@ export const images = {
   growthIllustration,
   manageCoursesIllustration,
   creatorBannerBg,
+  testimonialSarah,
+  testimonialJames,
+  testimonialAlex,
 };
 
 export {
@@ -93,6 +99,9 @@ export {
   growthIllustration,
   manageCoursesIllustration,
   creatorBannerBg,
+  testimonialSarah,
+  testimonialJames,
+  testimonialAlex,
 };
 
 export default images;
