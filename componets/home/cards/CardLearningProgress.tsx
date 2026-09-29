@@ -2,11 +2,6 @@
 
 import { motion } from "framer-motion";
 
-/**
- * CardLearningProgress — floating hero card
- * Matches Figma: 232×131, r:16, white fill
- * Shows: "Learning Progress" label, "55%" large bold, lime progress bar (55% filled)
- */
 export default function CardLearningProgress() {
   const progress = 55;
 
@@ -22,7 +17,6 @@ export default function CardLearningProgress() {
         gap: 6,
       }}
     >
-      {/* Label */}
       <p
         className="font-body font-medium text-zinc-500 leading-tight"
         style={{ fontSize: 12 }}
@@ -30,7 +24,6 @@ export default function CardLearningProgress() {
         Learning Progress
       </p>
 
-      {/* Big percentage */}
       <p
         className="font-body font-bold text-zinc-900 leading-none"
         style={{ fontSize: 42 }}
@@ -38,7 +31,6 @@ export default function CardLearningProgress() {
         {progress}%
       </p>
 
-      {/* Progress bar */}
       <div
         className="w-full rounded-full overflow-hidden"
         style={{ height: 8, backgroundColor: "#e5e7eb" }}
