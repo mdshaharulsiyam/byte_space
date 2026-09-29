@@ -26,6 +26,7 @@ import categoryBusiness from "./category-business.png";
 import categoryMarketing from "./category-marketing.png";
 import categoryPhotography from "./category-photography.png";
 import growthIllustration from "./growth-illustration.png";
+import manageCoursesIllustration from "./manage-courses-illustration.png";
 
 export const images = {
   logo,
@@ -56,6 +57,7 @@ export const images = {
   categoryMarketing,
   categoryPhotography,
   growthIllustration,
+  manageCoursesIllustration,
 };
 
 export {
@@ -87,6 +89,7 @@ export {
   categoryMarketing,
   categoryPhotography,
   growthIllustration,
+  manageCoursesIllustration,
 };
 
 export default images;

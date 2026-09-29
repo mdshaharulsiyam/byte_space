@@ -3,6 +3,7 @@ import {
   GrowthSection,
   Hero,
   LearningPathsSection,
+  ManageCoursesSection,
   Sponsors,
 } from "@/componets/shared";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <CoursesSection />
       <LearningPathsSection />
       <GrowthSection />
+      <ManageCoursesSection />
     </div>
   );
 }
