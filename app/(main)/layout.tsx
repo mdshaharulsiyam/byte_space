@@ -1,4 +1,4 @@
-import Navbar from "@/componets/shared/Navbar";
+import { Navbar, Footer } from "@/componets/shared";
 
 export default function MainLayout({
   children,
@@ -9,6 +9,7 @@ export default function MainLayout({
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 }
