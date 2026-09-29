@@ -1,8 +1,12 @@
 import {
   CoursesSection,
+  CreatorBannerSection,
+  GrowthSection,
   Hero,
   LearningPathsSection,
+  ManageCoursesSection,
   Sponsors,
+  TestimonialsSection,
 } from "@/componets/shared";
 
 export default function Home() {
@@ -12,6 +16,10 @@ export default function Home() {
       <Sponsors />
       <CoursesSection />
       <LearningPathsSection />
+      <GrowthSection />
+      <ManageCoursesSection />
+      <CreatorBannerSection />
+      <TestimonialsSection />
     </div>
   );
 }
