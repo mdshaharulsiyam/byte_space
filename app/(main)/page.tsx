@@ -6,6 +6,7 @@ import {
   LearningPathsSection,
   ManageCoursesSection,
   Sponsors,
+  TestimonialsSection,
 } from "@/componets/shared";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <GrowthSection />
       <ManageCoursesSection />
       <CreatorBannerSection />
+      <TestimonialsSection />
     </div>
   );
 }
