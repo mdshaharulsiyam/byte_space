@@ -65,8 +65,8 @@ export default function Hero() {
         <div
           className="absolute pointer-events-none"
           style={{
-            top: "clamp(260px, 36vw, 460px)",
-            left: "clamp(12px, 11vw, 170px)",
+            top: "clamp(230px, 30vw, 390px)",
+            left: "clamp(20px, 14vw, 210px)",
             width: "clamp(70px, 12vw, 175px)",
           }}
         >
@@ -117,8 +117,8 @@ export default function Hero() {
         <div
           className="absolute pointer-events-none"
           style={{
-            top: "clamp(260px, 35vw, 450px)",
-            right: "clamp(16px, 9.5vw, 140px)",
+            top: "clamp(230px, 29vw, 380px)",
+            right: "clamp(24px, 14vw, 195px)",
             width: "clamp(75px, 12.5vw, 188px)",
           }}
         >
@@ -149,14 +149,14 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container-custom relative z-40 flex flex-col items-center text-center pt-14 md:pt-20 lg:pt-24">
+      <div className="container-custom relative z-40 flex flex-col items-center text-center pt-10 md:pt-14 lg:pt-16">
         <h1 className="font-heading font-bold text-white text-[36px] sm:text-[52px] md:text-[60px] lg:text-[68px] leading-[1.1] tracking-tight max-w-[820px]">
           Get Access to Hundreds{" "}
           <br className="hidden sm:block" />
           Courses Available
         </h1>
 
-        <p className="font-body font-normal text-white/75 text-[15px] sm:text-[17px] max-w-[580px] mt-5 mb-9 leading-relaxed">
+        <p className="font-body font-normal text-white/75 text-[15px] sm:text-[17px] max-w-[880px] mt-5 mb-9 leading-relaxed">
           Unlock your creativity, gain valuable knowledge, and grow your
           business with our wide range of courses.
         </p>
@@ -199,19 +199,19 @@ export default function Hero() {
       </div>
 
       <div
-        className="relative w-full mt-10 md:mt-14 overflow-hidden"
-        style={{ height: "clamp(340px, 48vw, 600px)" }}
+        className="relative w-full mt-8 md:mt-10 overflow-hidden"
+        style={{ height: "clamp(320px, 44vw, 520px)" }}
       >
         <div
           className="absolute pointer-events-none z-10"
           style={{
             left: "50%",
             bottom: 0,
-            transform: "translateX(-50%) translateY(50%)",
-            width: "clamp(500px, 84vw, 1100px)",
+            transform: "translateX(-50%) translateY(58%)",
+            width: "clamp(530px, 86vw, 1180px)",
             aspectRatio: "1 / 1",
             borderRadius: "50%",
-            border: "clamp(70px, 23vw, 306px) solid #cbfc01",
+            border: "clamp(76px, 23vw, 325px) solid #cbfc01",
           }}
           aria-hidden="true"
         />
@@ -219,8 +219,8 @@ export default function Hero() {
         <div
           className="absolute left-1/2 bottom-0 pointer-events-none z-20"
           style={{
-            transform: "translateX(-50%)",
-            width: "clamp(200px, 38vw, 520px)",
+            transform: "translateX(-50%) translateY(21%)",
+            width: "clamp(260px, 44vw, 620px)",
           }}
         >
           <Image
@@ -228,7 +228,7 @@ export default function Hero() {
             alt="ByteSpace student"
             width={578}
             height={541}
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain block"
             priority
           />
         </div>
@@ -236,8 +236,8 @@ export default function Hero() {
         <div
           className="absolute z-30 transition-transform duration-300 hover:scale-[1.03]"
           style={{
-            left: "clamp(8px, 12%, 195px)",
-            top: "22%",
+            left: "calc(50% - clamp(160px, 22vw, 316px))",
+            top: "24%",
           }}
         >
           <CardTopCourses />
@@ -246,8 +246,8 @@ export default function Hero() {
         <div
           className="absolute z-30 transition-transform duration-300 hover:scale-[1.03]"
           style={{
-            right: "clamp(8px, 10%, 185px)",
-            top: "20%",
+            right: "calc(50% - clamp(180px, 24.5vw, 353px))",
+            top: "22%",
           }}
         >
           <CardLearningProgress />
@@ -256,7 +256,7 @@ export default function Hero() {
         <div
           className="absolute z-30 transition-transform duration-300 hover:scale-[1.03]"
           style={{
-            left: "clamp(8px, 8%, 145px)",
+            left: "calc(50% - clamp(180px, 27vw, 392px))",
             bottom: "8%",
           }}
         >
