@@ -33,6 +33,17 @@ import testimonialJames from "./testimonial-james.png";
 import testimonialAlex from "./testimonial-alex.png";
 import registerIllustration from "./register-illustration.png";
 import brandLogo from "./brand-logo.png";
+import happyStudentsAvatars from "./happy-students-avatars.png";
+import student1 from "./student-1.jpg";
+import student2 from "./student-2.jpg";
+import student3 from "./student-3.jpg";
+import student4 from "./student-4.jpg";
+import student5 from "./student-5.jpg";
+import student6 from "./student-6.jpg";
+import courseAvatar1 from "./course-avatar-1.jpg";
+import courseAvatar2 from "./course-avatar-2.jpg";
+import courseAvatar3 from "./course-avatar-3.jpg";
+import courseAvatar4 from "./course-avatar-4.jpg";
 
 export const images = {
   logo,
@@ -70,6 +81,17 @@ export const images = {
   testimonialAlex,
   registerIllustration,
   brandLogo,
+  happyStudentsAvatars,
+  student1,
+  student2,
+  student3,
+  student4,
+  student5,
+  student6,
+  courseAvatar1,
+  courseAvatar2,
+  courseAvatar3,
+  courseAvatar4,
 };
 
 export {
@@ -108,6 +130,17 @@ export {
   testimonialAlex,
   registerIllustration,
   brandLogo,
+  happyStudentsAvatars,
+  student1,
+  student2,
+  student3,
+  student4,
+  student5,
+  student6,
+  courseAvatar1,
+  courseAvatar2,
+  courseAvatar3,
+  courseAvatar4,
 };
 
 export default images;

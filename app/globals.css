@@ -20,11 +20,55 @@
   --foreground: #242528;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.8deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @layer utilities {
@@ -85,23 +129,24 @@ body {
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-body font-medium text-[16px] cursor-pointer transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-body font-medium text-[16px] cursor-pointer transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-95;
   }
 
   .btn-primary {
-    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-secondary hover:bg-secondary-hover text-zinc-900 inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-secondary hover:bg-secondary-hover text-zinc-900 inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-95;
   }
 
   .btn-secondary {
-    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-primary hover:bg-primary-hover text-white inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-primary hover:bg-primary-hover text-white inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-95;
   }
 
   .btn-outline {
-    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-white hover:border-zinc-400 text-zinc-800 hover:text-zinc-950 border border-zinc-200 inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-200;
+    @apply font-body font-medium text-[16px] leading-tight px-6 py-3 rounded-full bg-white hover:border-zinc-400 text-zinc-800 hover:text-zinc-950 border border-zinc-200 inline-flex items-center justify-center gap-2 cursor-pointer transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-95;
   }
 
   .card-auth {
-    @apply bg-white rounded-[24px] p-8 md:p-12 shadow-auth w-full max-w-[579px];
+    @apply bg-white rounded-[24px] p-8 md:p-12 shadow-auth w-full max-w-[579px] transition-all duration-300 ease-out;
+    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .input-auth {
@@ -125,14 +170,30 @@ body {
   }
 
   .card-course {
-    @apply bg-white rounded-[24px] border border-zinc-200 p-4 flex flex-col justify-between transition-all duration-200 hover:border-zinc-300 hover:shadow-card hover:-translate-y-0.5;
+    @apply bg-white rounded-[24px] border border-zinc-200 p-4 flex flex-col justify-between transition-all duration-300 ease-out hover:border-zinc-300 hover:shadow-xl hover:-translate-y-1.5;
   }
 
   .card-category {
-    @apply bg-zinc-100 rounded-[24px] p-6 flex flex-col items-center justify-center text-center transition-all duration-200 hover:bg-white hover:shadow-card hover:-translate-y-0.5 cursor-pointer;
+    @apply bg-zinc-100 rounded-[24px] p-6 flex flex-col items-center justify-center text-center transition-all duration-300 ease-out hover:bg-white hover:shadow-xl hover:-translate-y-1.5 cursor-pointer;
   }
 
   .badge-pill {
-    @apply font-body font-medium text-[12px] inline-flex items-center gap-1.5 px-3 py-1 rounded-full;
+    @apply font-body font-medium text-[12px] inline-flex items-center gap-1.5 px-3 py-1 rounded-full transition-transform duration-200 hover:scale-105;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 7s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 }

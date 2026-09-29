@@ -1,5 +1,17 @@
 import Image, { StaticImageData } from "next/image";
-import { courseAvatars } from "@/assets";
+import {
+  courseAvatar1,
+  courseAvatar2,
+  courseAvatar3,
+  courseAvatar4,
+} from "@/assets";
+
+const COURSE_ENROLLED_AVATARS = [
+  { src: courseAvatar1, alt: "Student 1" },
+  { src: courseAvatar2, alt: "Student 2" },
+  { src: courseAvatar3, alt: "Student 3" },
+  { src: courseAvatar4, alt: "Student 4" },
+];
 
 export interface Course {
   id: number;
@@ -81,13 +93,45 @@ export default function CourseCard({ course }: CourseCardProps) {
             <span>{course.level}</span>
           </div>
 
-          <Image
-            src={courseAvatars}
-            alt="Students enrolled"
-            width={131}
-            height={32}
-            className="h-7 w-auto object-contain"
-          />
+          <div className="flex items-center">
+            <div className="flex">
+              {COURSE_ENROLLED_AVATARS.map((avatar, i) => (
+                <div
+                  key={i}
+                  className="rounded-full border-2 border-white shrink-0 overflow-hidden"
+                  style={{
+                    width: 24,
+                    height: 24,
+                    marginLeft: i === 0 ? 0 : -8,
+                    position: "relative",
+                    zIndex: COURSE_ENROLLED_AVATARS.length - i,
+                  }}
+                >
+                  <Image
+                    src={avatar.src}
+                    alt={avatar.alt}
+                    width={24}
+                    height={24}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <div
+              className="flex items-center justify-center font-body font-bold text-zinc-900 rounded-full shrink-0"
+              style={{
+                width: 24,
+                height: 24,
+                backgroundColor: "#cbfc01",
+                fontSize: 9,
+                marginLeft: -6,
+                position: "relative",
+                zIndex: 0,
+              }}
+            >
+              26+
+            </div>
+          </div>
         </div>
 
         <div className="flex items-baseline gap-1">
