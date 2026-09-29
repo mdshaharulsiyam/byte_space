@@ -1,4 +1,11 @@
-import { CoursesSection, Hero, Sponsors } from "@/componets/shared";
+import {
+  CoursesSection,
+  GrowthSection,
+  Hero,
+  LearningPathsSection,
+  ManageCoursesSection,
+  Sponsors,
+} from "@/componets/shared";
 
 export default function Home() {
   return (
@@ -6,6 +13,9 @@ export default function Home() {
       <Hero />
       <Sponsors />
       <CoursesSection />
+      <LearningPathsSection />
+      <GrowthSection />
+      <ManageCoursesSection />
     </div>
   );
 }
