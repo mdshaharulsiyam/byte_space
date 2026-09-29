@@ -6,6 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { logo } from "@/assets";
 
+import { AnimatePresence, motion } from "framer-motion";
+
 interface NavbarProps {
   className?: string;
 }
@@ -143,75 +145,82 @@ export default function Navbar({ className = "" }: NavbarProps) {
         </button>
       </div>
 
-      {isMobileMenuOpen && (
-        <div
-          className="md:hidden relative z-10 px-5 py-6 space-y-5"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.1)", background: "#003be2" }}
-        >
-          <nav className="flex flex-col space-y-4">
-            {navLinks.map((link) => {
-              const isActive = link.href !== "#" && pathname === link.href;
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-body text-[17px] py-1 transition-colors ${
-                    isActive
-                      ? "font-semibold text-white"
-                      : "font-medium text-white/60 hover:text-white"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-          </nav>
-
-          <div
-            className="pt-4 flex items-center justify-between"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="md:hidden relative z-10 px-5 py-6 space-y-5 overflow-hidden"
+            style={{ borderTop: "1px solid rgba(255,255,255,0.1)", background: "#003be2" }}
           >
-            <div className="flex items-center gap-4">
-              <Link
-                href="/login"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-body font-medium text-[15px] text-white/70 hover:text-white"
-              >
-                Sign In
-              </Link>
-              <span className="block w-px h-4 bg-white/25" aria-hidden="true" />
-              <Link
-                href="/register"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-body font-medium text-[15px] text-white/70 hover:text-white"
-              >
-                Join Us
-              </Link>
-            </div>
-            <button
-              type="button"
-              className="text-white/70 hover:text-white p-1 cursor-pointer"
-              aria-label="Cart"
+            <nav className="flex flex-col space-y-4">
+              {navLinks.map((link) => {
+                const isActive = link.href !== "#" && pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`font-body text-[17px] py-1 transition-colors ${
+                      isActive
+                        ? "font-semibold text-white"
+                        : "font-medium text-white/60 hover:text-white"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            <div
+              className="pt-4 flex items-center justify-between"
+              style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
             >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/login"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="font-body font-medium text-[15px] text-white/70 hover:text-white"
+                >
+                  Sign In
+                </Link>
+                <span className="block w-px h-4 bg-white/25" aria-hidden="true" />
+                <Link
+                  href="/register"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="font-body font-medium text-[15px] text-white/70 hover:text-white"
+                >
+                  Join Us
+                </Link>
+              </div>
+              <button
+                type="button"
+                className="text-white/70 hover:text-white p-1 cursor-pointer"
+                aria-label="Cart"
               >
-                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                </svg>
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
+

@@ -24,8 +24,8 @@ export default function TestimonialsSection() {
         <TestimonialsHeader />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-14 lg:mt-16">
-          {testimonialsData.map((item) => (
-            <TestimonialCard key={item.id} item={item} />
+          {testimonialsData.map((item, index) => (
+            <TestimonialCard key={item.id} item={item} index={index} />
           ))}
         </div>
       </div>
