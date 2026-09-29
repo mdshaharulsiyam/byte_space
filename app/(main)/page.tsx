@@ -1,5 +1,6 @@
 import {
   CoursesSection,
+  CreatorBannerSection,
   GrowthSection,
   Hero,
   LearningPathsSection,
@@ -16,6 +17,7 @@ export default function Home() {
       <LearningPathsSection />
       <GrowthSection />
       <ManageCoursesSection />
+      <CreatorBannerSection />
     </div>
   );
 }
