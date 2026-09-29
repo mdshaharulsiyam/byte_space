@@ -31,6 +31,8 @@ import creatorBannerBg from "./creator-banner-bg.png";
 import testimonialSarah from "./testimonial-sarah.png";
 import testimonialJames from "./testimonial-james.png";
 import testimonialAlex from "./testimonial-alex.png";
+import registerIllustration from "./register-illustration.png";
+import brandLogo from "./brand-logo.png";
 
 export const images = {
   logo,
@@ -66,6 +68,8 @@ export const images = {
   testimonialSarah,
   testimonialJames,
   testimonialAlex,
+  registerIllustration,
+  brandLogo,
 };
 
 export {
@@ -102,6 +106,8 @@ export {
   testimonialSarah,
   testimonialJames,
   testimonialAlex,
+  registerIllustration,
+  brandLogo,
 };
 
 export default images;

@@ -4,11 +4,11 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="auth-bg-wrapper min-h-screen flex flex-col items-center justify-center relative">
+    <div className="auth-bg-wrapper min-h-screen relative flex flex-col justify-between">
       <div className="auth-grid-lines" />
-      <main className="relative z-10 w-full flex items-center justify-center p-4">
+      <div className="relative z-10 w-full flex-1 flex flex-col">
         {children}
-      </main>
+      </div>
     </div>
   );
 }
